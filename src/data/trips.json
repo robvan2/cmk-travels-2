@@ -1,0 +1,26 @@
+[
+  {
+    "image": "../assets/images/travel-7.jpg",
+    "alt": "Beni Abes, Algeria",
+    "name": "Beni Abes, Algeria",
+    "button": "View destination"
+  },
+  {
+    "image": "../assets/images/travel-1.jpg",
+    "alt": "Marga, Indonisia",
+    "name": "Marga, Indonisia",
+    "button": "View destination"
+  },
+  {
+    "image": "../assets/images/travel-5.jpg",
+    "alt": "Dambulla, Sri Lanka",
+    "name": "Dambulla, Sri Lanka",
+    "button": "View destination"
+  },
+  {
+    "image": "../assets/images/travel-2.jpg",
+    "alt": "Devils Tower, US",
+    "name": "Devils Tower, US",
+    "button": "View destination"
+  }
+]
