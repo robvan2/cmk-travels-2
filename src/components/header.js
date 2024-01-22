@@ -6,14 +6,18 @@ import { MenuData } from '../data/NavMenu.data'
 import { Button } from './Button'
 
 const Nav = styled.nav`
-  display:flex;
-  justify-content:space-between;
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items:center;
   background:transparent;
   padding: 15px calc((100vw - 1300px)/2);
   z-index:100;
   position:relative;
   height:68px;
+
+  @media screen and (max-width:768px){
+    grid-template-columns:1fr 1fr;
+  }
 `
 const NavLink = styled(Link)`
   color: #fff;
@@ -35,11 +39,13 @@ const Bars = styled(FaBars)`
 
   @media screen and (max-width:768px){
     display:block;
+    justify-self:flex-end;
   }
 `
 const NavMenu = styled.div`
   display:flex;
   align-items:center;
+  justify-content:center;
   
   @media screen and (max-width: 768px){
     display:none;
@@ -56,16 +62,17 @@ const NavBtn = styled.span`
   display: flex;
   align-items:center;
   padding:0 1rem;
+  justify-content:flex-end;
 
   @media screen and (max-width:768px){
     display:none;
   }
 `
-function header() {
+function header({ clicked, setClicked }) {
   return (
     <Nav>
       <NavLink to="/" >Explorix</NavLink>
-      <Bars />
+      <Bars onClick={() => setClicked(!clicked)} />
       <NavMenu>
         {MenuData.map((item, index) => (
           <MenuItem to={item.link} key={index}>{item.title}</MenuItem>
